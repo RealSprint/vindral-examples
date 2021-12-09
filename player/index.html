@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico">
+    <title>Embed | Vindral Examples</title>
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <!-- Example CSS -->
+    <style>
+      #playback-state {
+        display: inline-block;
+        padding: 5px;
+        background: rgb(0, 0, 0);
+        color: white;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+        <section class="container">
+          <a class="button" href="../">Back to examples</a>
+        </section>
+      </nav>
+      <section class="container">
+        <h1>Player example</h1>
+        <p>In general, we recommend using our <a href="https://docs.vindral.com/docs/guides/using-the-embed-player">hosted player</a> to make sure it's up to date.</p>
+        <p>The bundled Player SDK is a great way to integrate inside a native app or when you want/need to use your own infrastructure.</p>
+
+        <div id="playback-state">Initiating...</div>
+        <div id="vindral-container"></div>
+      </section>
+    </main>
+  </body>
+</html>
