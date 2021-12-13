@@ -13,3 +13,26 @@ Web SDK examples:
 - Audio-only
 - Player (bundled)
 - Custom Player
+
+## Requirements
+
+Latest stable nodejs and NPM version.
+
+## Getting started
+
+Install packages
+
+`npm install`
+
+Run
+
+`npm run start`
+
+Which will open the page in the browser at port 8080 or another free port.
+
+## More reading
+
+You may find the following links helpful:
+
+* [vindral.com](https://www.vindral.com) - information about Vindral product family
+* [docs.vindral.com](https://docs.vindral.com) - landing page for Vindral documentation

@@ -2,7 +2,16 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
-const pages = ["basic", "player", "embed", "embed-responsive", "audio-only", "custom-player", "cast-standalone"];
+const pages = [
+  "basic",
+  "player",
+  "embed",
+  "embed-responsive",
+  "audio-only",
+  "custom-player",
+  "cast-standalone",
+  "webrtc-ingest-basic",
+];
 
 module.exports = {
   entry: pages.reduce(
