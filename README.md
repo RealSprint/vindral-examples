@@ -2,17 +2,25 @@
 
 This repository contains examples that illustrate how to use Vindral SDKs.
 
+See the hosted build at [realsprint.github.io/vindral-examples/](https://realsprint.github.io/vindral-examples/).
+
 ## Vindral Web SDK
 
 Web SDK examples:
 
-- Basic
-- Channel Switching
-- Embed
-- Embed Responsive
-- Audio-only
-- Player (bundled)
-- Custom Player
+- [Basic](https://realsprint.github.io/vindral-examples/basic/)
+- [Embed](https://realsprint.github.io/vindral-examples/embed/)
+- [Embed Responsive](https://realsprint.github.io/vindral-examples/embed-responsive/)
+- [Audio-only](https://realsprint.github.io/vindral-examples/audio-only/)
+- [Player (bundled)](https://realsprint.github.io/vindral-examples/player/)
+- [Custom Player](https://realsprint.github.io/vindral-examples/custom-player/)
+- [Cast Standalone](https://realsprint.github.io/vindral-examples/cast-standalone/)
+
+## Vindral WebRTC Ingest SDK
+
+WebRTC Ingest SDK examples:
+
+- [Basic](https://realsprint.github.io/vindral-examples/webrtc-ingest-basic/)
 
 ## Requirements
 
