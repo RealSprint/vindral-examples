@@ -1,0 +1,35 @@
+
+#vindral-area {
+    position: relative;
+    min-height: 200px;
+    background: black;
+}
+
+#playback-state {
+    display: inline-block;
+    padding: 5px;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.2em;
+}
+
+#activate-audio-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#activate-audio-button svg {
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+#vindral-container,
+#vindral-container canvas,
+#vindral-container video {
+    width: 100%;
+    position: relative;
+}

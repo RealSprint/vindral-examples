@@ -1,0 +1,12 @@
+
+video {
+    max-width: 100%;
+}
+
+#stream-state {
+    background-color: bisque;
+}
+
+.hidden {
+    display: none;
+}
