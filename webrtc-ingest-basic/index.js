@@ -21,11 +21,11 @@ const setupMediaTracks = async () => {
       echoCancellation: false,
     },
     video: {
-      width: { exact: 1280 },
-      height: { exact: 720 },
+      width: { ideal: 1280 },
+      height: { ideal: 720 },
       // more than 30 fps often lowers performance (browser-side) and image quality.
       // only use higher frameRate if you know it will work
-      frameRate: { exact: 30 },
+      frameRate: { ideal: 30, max: 30 },
     },
   })
 
