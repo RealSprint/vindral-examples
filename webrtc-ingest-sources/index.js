@@ -109,7 +109,7 @@ const startWebrtc = async (streamKey) => {
     webrtcIngest.unload()
   }
   webrtcIngest = new WebrtcIngest({
-    url: "https://lb.stage.cdn.vindral.com",
+    url: "https://lb.cdn.vindral.com",
     streamKey,
   })
 
