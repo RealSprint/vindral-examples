@@ -94,7 +94,12 @@ const startWebrtc = async (streamKey) => {
 // in order of removing timers, intervals, etc
 stopButton.onclick = () => {
   stopButton.classList.add("hidden")
+  streamKeyForm.classList.remove("hidden")
   webrtcIngest?.unload()
+  
+  if (localVideo) {
+    localVideo.srcObject = null
+  }
 }
 
 // get streamkey from form and start webrtcingest session
