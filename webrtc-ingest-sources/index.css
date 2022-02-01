@@ -1,0 +1,25 @@
+
+video {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+#stream-state {
+    background-color: bisque;
+}
+
+.hidden {
+    min-width: 300px;
+    display: none;
+}
+
+.select-container {
+    min-width: 300px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    .select-container {
+        display: block;
+    }
+}

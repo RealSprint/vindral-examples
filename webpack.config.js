@@ -11,6 +11,7 @@ const pages = [
   "custom-player",
   "cast-standalone",
   "webrtc-ingest-basic",
+  "webrtc-ingest-sources"
 ];
 
 module.exports = {
