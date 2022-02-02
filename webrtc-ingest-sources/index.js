@@ -68,8 +68,8 @@ const getMediaStream = async () =>  {
       deviceId: videoSource ? {exact: videoSource} : undefined,
       width: { ideal: 1280 },
       height: { ideal: 720 },
-      // more than 30 fps often lowers performance (browser-side) and image quality.
-      // only use higher frameRate if you know it will work
+      // More than 30 fps often lowers performance (browser-side) and image quality.
+      // Only use higher frameRate if you know it will work.
       frameRate: { ideal: 30, max: 30 },
     },
   }
@@ -77,7 +77,7 @@ const getMediaStream = async () =>  {
   try {
     mediaStream = await navigator.mediaDevices.getUserMedia(mediaConstraints)
     await updateDeviceList()
-    // show stream on local video object. Skip for audio only streams
+    // Show stream on local video object. Skip for audio only streams.
     if (localVideo) {
       localVideo.srcObject = mediaStream
       localVideo.style.display = "block"
@@ -113,7 +113,7 @@ const startWebrtc = async (streamKey) => {
     streamKey,
   })
 
-  // listen to state changes
+  // Listen to state changes.
   webrtcIngest.on("broadcast state change", () => {
     streamState.textContent = `${webrtcIngest.connectionState} | ${webrtcIngest.broadcastState}`
   })
@@ -122,7 +122,7 @@ const startWebrtc = async (streamKey) => {
   })
 
   try {
-    // Get the video and audio tracks from the media stream
+    // Get the video and audio tracks from the media stream.
     const audioTracks = mediaStream.getAudioTracks()
     const videoTracks = mediaStream.getVideoTracks()
 
@@ -138,8 +138,8 @@ const startWebrtc = async (streamKey) => {
       void webrtcIngest.setAudioTrack(audioTracks[0])
     }
 
-    // even though we have a connection, the actual broadcast will not start
-    // until this call has been made
+    // Even though we have a connection, the actual broadcast will not start
+    // until this call has been made.
     webrtcIngest.broadcast()
   } catch (error) {
     console.error("Failed to start webrtc", error)
@@ -147,8 +147,8 @@ const startWebrtc = async (streamKey) => {
   }
 }
 
-// remember to unload instance when it's not wanted any longer,
-// in order of removing timers, intervals, etc
+// Remember to unload instance when it's not wanted any longer,
+// in order of removing timers, intervals, etc.
 const stopWebrtc = async () => {
   await webrtcIngest?.unload()
   getMediaStream()
@@ -156,7 +156,7 @@ const stopWebrtc = async () => {
 }
 stopButton.onclick = stopWebrtc
 
-// get streamkey from form and start webrtcingest session
+// Get streamkey from form and start webrtcingest session.
 streamForm.onsubmit = (e) => {
   e.preventDefault()
   const streamKey = streamKeyInput.value
@@ -164,8 +164,8 @@ streamForm.onsubmit = (e) => {
   if (mediaStream) {
     void startWebrtc(streamKey)
     streamState.textContent = "initializing..."
-    // inputs are not allowed to be changed when broadcasting
-  disableInput()
+    // Inputs are not allowed to be changed when broadcasting.
+    disableInput()
   }
 }
  
