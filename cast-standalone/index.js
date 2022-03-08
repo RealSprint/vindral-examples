@@ -9,7 +9,6 @@ const vindralOptions = {
 }
 
 const castSender = new CastSender({
-  background: "this.options.castBackground",
   receiverApplicationId: "A5452297",
   options: vindralOptions,
 })
@@ -21,7 +20,7 @@ castSender.on("failed", () => playbackState.textContent = "failed")
 castSender.on("metadata", (meta) => console.log("metadata", meta))
 castSender.on("server wallclock time", (wallclockTime) => console.log("server wallclock time", wallclockTime))
 castSender
-  .init()
+.init()
   .then(() => {
     // either create the cast button, that will trigger the native/browser cast receiver picker dialogue
     const castButton = document.createElement("google-cast-launcher")
