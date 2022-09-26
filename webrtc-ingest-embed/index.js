@@ -14,6 +14,5 @@ streamKeyForm.onsubmit = (e) => {
     params.set("core.streamKey", streamKey)
     url.search = params
     embed.src = url.toString()
-    console.log(embed.src)
   }
 }
