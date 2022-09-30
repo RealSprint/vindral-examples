@@ -21,6 +21,8 @@ Web SDK examples:
 WebRTC Ingest SDK examples:
 
 - [Basic](https://realsprint.github.io/vindral-examples/webrtc-ingest-basic/)
+- [Select Sources](https://realsprint.github.io/vindral-examples/webrtc-ingest-sources/)
+- [Embed](https://realsprint.github.io/vindral-examples/webrtc-ingest-embed/)
 
 ## Requirements
 
@@ -42,5 +44,5 @@ Which will open the page in the browser at port 8080 or another free port.
 
 You may find the following links helpful:
 
-* [vindral.com](https://www.vindral.com) - information about Vindral product family
-* [docs.vindral.com](https://docs.vindral.com) - landing page for Vindral documentation
+- [vindral.com](https://www.vindral.com) - information about Vindral product family
+- [docs.vindral.com](https://docs.vindral.com) - landing page for Vindral documentation
