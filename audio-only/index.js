@@ -31,11 +31,11 @@ instance.on("metadata", (metadata) => console.log("metadata: ", metadata.content
 // This event is emitted when the vindral detects that the browser requires a user initiated click event to start audio
 instance.on("needs user input", () => (button.style.display = "block"))
 
-// Starts connecting to the channel
-instance.connect()
+// Will connect, start the stream and try to play
+instance.play()
 
 // This activates audio on browsers that need a user input before audio can be played
 button.addEventListener("click", () => {
   button.style.display = "none"
-  instance.userInput()
+  instance.play()
 })

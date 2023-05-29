@@ -28,8 +28,8 @@ player.core.on("playback state", (state) => (playbackState.textContent = state))
 // This event is emitted when timed metadata events occur
 player.core.on("metadata", (metadata) => console.log("metadata: ", metadata.content))
 
-// Starts connecting to the channel
-player.core.connect()
+// Will connect, start the stream and try to play
+player.core.play()
 
 // Attaches the player view to the DOM
 player.attach(vindralContainer)

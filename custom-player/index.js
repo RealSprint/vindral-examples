@@ -68,14 +68,11 @@ function start() {
   // This event is emitted when the vindral detects that the browser requires a user initiated click event to start audio
   instance.on("needs user input", () => (button.style.display = "block"))
 
-  // Starts connecting to the channel
-  instance.connect()
+  // Will connect, start the stream and try to play
+  instance.play()
 
   // Attaches the video view to the DOM
   instance.attach(vindralContainer)
-
-  // Because we instantiated the player inside an event, no need for userInput
-  // instance.userInput()
 }
 
 function stop() {
