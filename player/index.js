@@ -1,4 +1,5 @@
 import { Player } from "@vindral/web-sdk"
+import "@vindral/web-sdk/style.css"
 
 const vindralContainer = document.querySelector("#vindral-container")
 const playbackState = document.querySelector("#playback-state")
@@ -9,6 +10,8 @@ const player = new Player({
   // if providing a channelGroupId, the player with add the channel selector in its controls section
   // making it possible to switch channel inline, without re-initiating the player
   channelGroupId: "vindral_demo_pk_932730be-db0c-46a0-a592-cfce7bdc5a43",
+}, {
+  fullscreenButtonEnabled: true,
 })
 
 // Errors are emitted when they can not be handled internally

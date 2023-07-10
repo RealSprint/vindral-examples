@@ -16,6 +16,14 @@ const pages = [
 ];
 
 module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
   entry: pages.reduce(
     (acc, page) => ({
       ...acc,
