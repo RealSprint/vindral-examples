@@ -11,12 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vindral/web-sdk": "^3.0.4",
+    "@vindral/web-sdk": "^3.0.5",
     "@vindral/webrtc-ingest-sdk": "^1.0.16"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^9.1.0",
+    "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.3",
     "webpack": "^5.64.3",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"
