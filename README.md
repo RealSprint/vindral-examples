@@ -23,6 +23,7 @@ WebRTC Ingest SDK examples:
 - [Basic](https://realsprint.github.io/vindral-examples/webrtc-ingest-basic/)
 - [Select Sources](https://realsprint.github.io/vindral-examples/webrtc-ingest-sources/)
 - [Embed](https://realsprint.github.io/vindral-examples/webrtc-ingest-embed/)
+- [Screen sharing](https://realsprint.github.io/vindral-examples/webrtc-ingest-screen-sharing/)
 
 ## Requirements
 
