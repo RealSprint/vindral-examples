@@ -12,7 +12,8 @@ const pages = [
   "cast-standalone",
   "webrtc-ingest-basic",
   "webrtc-ingest-sources",
-  "webrtc-ingest-embed"
+  "webrtc-ingest-embed",
+  "webrtc-ingest-screen-sharing",
 ];
 
 module.exports = {
