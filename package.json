@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vindral/web-sdk": "^3.2.0",
-    "@vindral/webrtc-ingest-sdk": "^1.0.17"
+    "@vindral/web-sdk": "^3.2.2",
+    "@vindral/webrtc-ingest-sdk": "^1.0.18"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
