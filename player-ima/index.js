@@ -46,7 +46,7 @@ let adPaused = false;
 /**
  * Initializes IMA setup.
  */
-function init() {
+function initIMA() {
   if (typeof google === 'undefined') {
     console.error("Google IMA SDK not loaded. Adblock may be enabled.")
     return;
@@ -254,4 +254,4 @@ document.addEventListener("visibilitychange", () => {
 });
 
 // Wire UI element references and UI event listeners.
-init();
+initIMA();
