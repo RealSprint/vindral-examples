@@ -1,0 +1,48 @@
+#vindral-area {
+    position: relative;
+    background: black;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+#playback-state {
+    display: inline-block;
+    padding: 5px;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.2em;
+}
+
+#vindral-container,
+#vindral-container canvas,
+#vindral-container video {
+    width: 100%;
+    position: relative;
+}
+
+#mainContainer {
+    position: relative;
+    width: 640px;
+    height: 360px;
+}
+
+#adContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 640px;
+    height: 360px;
+    transition: opacity 1s ease;
+    z-index: 100;
+    display: none;
+}
+
+#contentElement {
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+}
+
+#playButton {
+    margin-top: 10px;
+}

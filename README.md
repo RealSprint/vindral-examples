@@ -16,6 +16,10 @@ Web SDK examples:
 - [Custom Player](https://realsprint.github.io/vindral-examples/custom-player/)
 - [Cast Standalone](https://realsprint.github.io/vindral-examples/cast-standalone/)
 
+## IMA ad injection example
+
+- [IMA ad integration](https://realsprint.github.io/vindral-examples/player-ima/)
+
 ## Vindral WebRTC Ingest SDK
 
 WebRTC Ingest SDK examples:

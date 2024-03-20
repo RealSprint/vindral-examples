@@ -5,6 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const pages = [
   "basic",
   "player",
+  "player-ima",
   "embed",
   "embed-responsive",
   "audio-only",
