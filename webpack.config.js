@@ -17,6 +17,11 @@ const pages = [
   "webrtc-ingest-screen-sharing",
 ];
 
+const noBuildPages = [
+  "vanilla-js-umd",
+  "vanilla-js-player-esm",
+];
+
 module.exports = {
   module: {
     rules: [
@@ -59,6 +64,18 @@ module.exports = {
             {
               from: `${page}/index.css`,
               to: `${page}/index.css`,
+              noErrorOnMissing: true,
+            },
+          ],
+        })
+    ),
+    ...noBuildPages.map(
+      (page) =>
+        new CopyPlugin({
+          patterns: [
+            {
+              from: `${page}`,
+              to: `${page}`,
               noErrorOnMissing: true,
             },
           ],
