@@ -16,6 +16,13 @@ Web SDK examples:
 - [Custom Player](https://realsprint.github.io/vindral-examples/custom-player/)
 - [Cast Standalone](https://realsprint.github.io/vindral-examples/cast-standalone/)
 
+## Vanilla JS Web SDK
+
+Vanilla JS (no build step required) Web SDK examples:
+
+- [Basic Vanilla JS UMD](https://realsprint.github.io/vindral-examples/vanilla-js-umd/)
+- [Player Vanilla JS ESM](https://realsprint.github.io/vindral-examples/vanilla-js-player-esm/)
+
 ## IMA ad injection example
 
 - [IMA ad integration](https://realsprint.github.io/vindral-examples/player-ima/)
