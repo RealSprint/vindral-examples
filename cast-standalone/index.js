@@ -25,8 +25,9 @@ castSender
     // either create the cast button, that will trigger the native/browser cast receiver picker dialogue
     const castButton = document.createElement("google-cast-launcher")
     vindralContainer.appendChild(castButton)
-    // or call start manually, it will also open the dialogue
-    castSender.start()
+    playbackState.textContent = "initialized"
+    // or call start manually, it will also open the dialogue, like below
+    // return castSender.start()
   })
   .catch((err) => {
     playbackState.textContent = "unable to initialize cast"
