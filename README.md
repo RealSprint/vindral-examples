@@ -12,7 +12,7 @@ Web SDK examples:
 - [Embed](https://realsprint.github.io/vindral-examples/embed/)
 - [Embed Responsive](https://realsprint.github.io/vindral-examples/embed-responsive/)
 - [Audio-only](https://realsprint.github.io/vindral-examples/audio-only/)
-- [Player (bundled)](https://realsprint.github.io/vindral-examples/player/)
+- [Player (web component)](https://realsprint.github.io/vindral-examples/player/)
 - [Custom Player](https://realsprint.github.io/vindral-examples/custom-player/)
 - [Cast Standalone](https://realsprint.github.io/vindral-examples/cast-standalone/)
 

@@ -1,37 +1,25 @@
-import { Player } from "@vindral/web-sdk"
-import "@vindral/web-sdk/style.css"
+import { registerComponents } from "@vindral/web-sdk/player"
 
+registerComponents()
 const vindralContainer = document.querySelector("#vindral-container")
+const player = document.querySelector("#vindral-player")
 const playbackState = document.querySelector("#playback-state")
 
-const player = new Player({
-  url: "https://lb.cdn.vindral.com",
-  channelId: "vindral_demo1_ci_099ee1fa-80f3-455e-aa23-3d184e93e04f",
-  burstEnabled: true,
-  muted: true,
-}, {
-  fullscreenButtonEnabled: false,
+player.addEventListener("vindral-instance-ready", () => {
+  // Errors are emitted when they can not be handled internally
+  // fatal errors means that the client has been unloaded and will need to be re-initialized
+  player.instance.on("error", (error) => {
+    if (error.isFatal()) {
+      // A fatal error has occurred and the instance has been unloaded, read error.message to see what
+      // This can happen if the client has been unsuccessful to connect or authentication failed
+      // In this case a new Vindral instance needs to be created to restore the session
+      console.log("fatal error: ", error.message)
+    }
+  })
+
+  // This event is emitted when the playback state changes - can be used to show a buffer spinner during buffering
+  player.instance.on("playback state", (state) => (playbackState.textContent = state))
 })
-
-// Errors are emitted when they can not be handled internally
-// fatal errors means that the client has been unloaded and will need to be re-initialized
-player.core.on("error", (error) => {
-  if (error.isFatal()) {
-    // A fatal error has occured and the instance has been unloaded, read error.message to see what
-    // This can happen if the client has been unsuccessful to connect or authentication failed
-    // In this case a new Vindral instance needs to be created to restore the session
-    console.log("fatal error: ", error.message)
-  }
-})
-
-// This event is emitted when the playback state changes - can be used to show a buffer spinner during buffering
-player.core.on("playback state", (state) => (playbackState.textContent = state))
-
-// Will connect, start the stream and try to play
-player.core.play()
-
-// Attaches the player view to the DOM
-player.attach(vindralContainer)
 
 // IMA setup starts here
 let adsManager;
@@ -131,7 +119,7 @@ function playAds() {
     adsManager.start();
   } catch (adError) {
     // An error may be thrown if there was a problem with the VAST response.
-    player.core.play();
+    player.instance.play();
   }
 }
 
@@ -180,7 +168,7 @@ function onAdEvent(adEvent) {
       if (!ad.isLinear()) {
         // Position AdDisplayContainer correctly for overlay.
         // Use ad.width and ad.height.
-        player.core.play();
+        player.instance.play();
       }
       break;
     case google.ima.AdEvent.Type.STARTED:
@@ -233,7 +221,7 @@ function onContentPauseRequested() {
   // This function is where you should setup UI for showing ads (for example,
   // display ad timer countdown, disable seeking and more.)
   adContainer.style.display = "block";
-  player.core.pause();
+  player.instance.pause();
 }
 
 /**
@@ -244,7 +232,7 @@ function onContentResumeRequested() {
   // to play content. It is the responsibility of the Publisher to
   // implement this function when necessary.
   adContainer.style.display = "none";
-  player.core.play();
+  player.instance.play();
 }
 
 document.addEventListener("visibilitychange", () => {

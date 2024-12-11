@@ -1,4 +1,4 @@
-import { CastSender } from "@vindral/web-sdk"
+import { CastSender } from "@vindral/web-sdk/cast-sender"
 
 const vindralContainer = document.querySelector("#vindral-container")
 const playbackState = document.querySelector("#playback-state")

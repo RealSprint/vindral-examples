@@ -10,6 +10,7 @@ const pages = [
   "embed-responsive",
   "audio-only",
   "custom-player",
+  "custom-player-core",
   "cast-standalone",
   "webrtc-ingest-basic",
   "webrtc-ingest-sources",

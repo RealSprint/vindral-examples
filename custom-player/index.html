@@ -33,30 +33,35 @@
       <section class="container">
         <h1>Custom Player Example</h1>
         <p>
-          Here you can see a more advanced implementation of Vindral with a custom player interface.
-          In general we recommend using our <a href="../embed-responsive">Embedded Player</a> or the bundled <a href="../embed-responsive">Vindral Player SDK</a>.
+          Here you can see a more advanced implementation of Vindral with a custom player interface using our web components.
+          In general we recommend using our <a href="../player/">Web Player</a> or the <a href="../embed-responsive">Embedded Player</a>.
         </p>
 
-        <div id="playback-state">press start</div>
-
-        <div id="vindral-area" class="buffering">
-          <div id="vindral-container"></div>
-          <div id="activate-audio-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 896" height="100%" width="100%">
-              <path d="M128 384H0v256h128l256 192h64V192h-64L128 384zM864 416l-64-64-96 96-96-96-63 63.5 95 96.5-96 96 64 64 96-96 96 96 64-64-96-96L864 416z"/>
-            </svg>
-          </div>
-          <div id="vindral-thumbnail"></div>
-          <div class="buffering-overlay">
-            <div class="buffering-indicator"></div>
-          </div>
-
-          <div id="controls">
-            <button id="start-button">Start</button>
-            <button id="stop-button">Stop</button>
-            <button id="channel-button">New channel</button>
-          </div>
-        </div>
+        <vindral-controller
+          url="https://lb.cdn.vindral.com"
+          channel-id="vindral_demo2_ci_dbd1ca98-4e05-4a36-8215-0e8bca295ed2"
+          channel-group-id="vindral_demo_pk_932730be-db0c-46a0-a592-cfce7bdc5a43">
+          <vindral-control-bar slot="top-bar">
+            <vindral-rendition-levels-menu list-position="bottom"></vindral-rendition-levels-menu>
+            <vindral-cast-button slot="right"></vindral-cast-button>
+            <vindral-airplay-button slot="right"></vindral-airplay-button>
+          </vindral-control-bar>
+          <vindral-control-bar>
+            <vindral-play-button></vindral-play-button>
+            <vindral-mute-button></vindral-mute-button>
+            <vindral-volume-range></vindral-volume-range>
+            <vindral-channel-grid-button slot="right"></vindral-channel-grid-button>
+            <vindral-language-menu slot="right"></vindral-language-menu>
+            <vindral-pip-button slot="right"></vindral-pip-button>
+            <vindral-fullscreen-button slot="right"></vindral-fullscreen-button>
+          </vindral-control-bar>
+          <vindral-scroll-overlay slot="overlay-interactive">
+            <vindral-channel-grid></vindral-channel-grid>
+          </vindral-scroll-overlay>
+          <vindral-cast-overlay slot="overlay"></vindral-cast-overlay>
+          <vindral-buffering-overlay slot="overlay"></vindral-buffering-overlay>
+          <vindral-user-input-play-overlay slot="overlay"></vindral-user-input-play-overlay>
+        </vindral-controller>
 
       </section>
 
