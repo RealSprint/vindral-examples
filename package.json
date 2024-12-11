@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vindral/web-sdk": "^3.3.4",
+    "@vindral/web-sdk": "^4.0.0",
     "@vindral/webrtc-ingest-sdk": "^1.0.19"
   },
   "devDependencies": {

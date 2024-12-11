@@ -22,6 +22,13 @@
       rel="stylesheet"
       href="./index.css"
     />
+
+    <style>
+      vindral-player {
+        --vindral-volume-range-display: none;
+        --vindral-rendition-menu-display: none;
+      }
+    </style>
   </head>
   <body>
     <main class="wrapper">
@@ -35,7 +42,18 @@
     <div id="playback-state">Initiating...</div>
 
     <div id="mainContainer">
-        <div id="vindral-container"></div>
+        <div id="vindral-container">
+          <vindral-player
+            id="vindral-player"
+            url="https://lb.cdn.vindral.com"
+            channel-id="vindral_demo1_ci_099ee1fa-80f3-455e-aa23-3d184e93e04f"
+            burst-enabled
+            muted
+            pip="false"
+            cast="false"
+            fullscreen="false">
+          </vindral-player>
+        </div>
       <div id="adContainer"></div>
     </div>
     <button id="playButton">Play Ad</button>
