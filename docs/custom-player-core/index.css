@@ -1,0 +1,101 @@
+
+#vindral-area {
+    position: relative;
+    background: black;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+#playback-state {
+    display: inline-block;
+    padding: 5px;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.2em;
+}
+
+#activate-audio-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#activate-audio-button svg {
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+#vindral-container,
+#vindral-container canvas,
+#vindral-container video {
+    width: 100%;
+    position: relative;
+}
+#vindral-thumbnail {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#vindral-thumbnail img {
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.buffering-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 11;
+}
+
+.buffering .buffering-overlay {
+    display: flex;
+}
+
+.buffering-indicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    animation: scaleout 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+#controls {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    z-index: 20;
+}

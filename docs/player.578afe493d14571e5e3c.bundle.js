@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector("#vindral-player"),t=document.querySelector("#playback-state");e.addEventListener("vindral-instance-ready",(()=>{e.instance.on("error",(e=>{e.isFatal()&&console.log("fatal error: ",e.message)})),e.instance.on("playback state",(e=>t.textContent=e)),e.instance.on("metadata",(e=>console.log("metadata: ",e.content)))}))})();
