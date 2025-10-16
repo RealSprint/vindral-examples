@@ -12,6 +12,7 @@ const pages = [
   "custom-player",
   "custom-player-core",
   "cast-standalone",
+  "statistics-monitor",
   "webrtc-ingest-basic",
   "webrtc-ingest-sources",
   "webrtc-ingest-embed",
