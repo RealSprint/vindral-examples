@@ -37,6 +37,7 @@ function start() {
     url: "https://lb.cdn.vindral.com",
     channelId: channels[currentChannelIndex],
     channelGroupId,
+    minBufferTime: 1000, // your target buffer time / latency
   })
 
   // Errors are emitted when they can not be handled internally
