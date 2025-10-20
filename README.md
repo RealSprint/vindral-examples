@@ -15,6 +15,7 @@ Web SDK examples:
 - [Player (web component)](https://realsprint.github.io/vindral-examples/player/)
 - [Custom Player](https://realsprint.github.io/vindral-examples/custom-player/)
 - [Cast Standalone](https://realsprint.github.io/vindral-examples/cast-standalone/)
+- [Statistics Monitor](https://realsprint.github.io/vindral-examples/statistics-monitor/)
 
 ## Vanilla JS Web SDK
 
