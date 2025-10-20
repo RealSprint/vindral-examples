@@ -73,6 +73,7 @@ button.style.display = "none"
 const instance = new Vindral({
   url: "https://lb.cdn.vindral.com",
   channelId: "vindral_demo1_ci_099ee1fa-80f3-455e-aa23-3d184e93e04f",
+  minBufferTime: 1000,
 })
 
 // Store previous values to detect changes
