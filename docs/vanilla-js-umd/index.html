@@ -19,7 +19,7 @@
 
     <!-- Host and fetch Vindral via a CDN or your own servers -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@vindral/web-sdk/index.umd.min.js">
+      src="https://cdn.jsdelivr.net/npm/@vindral/web-sdk/legacy.umd.js">
     </script>
     <link
       rel="stylesheet"
@@ -115,7 +115,7 @@
           console.log("fatal error: ", error.message)
         }
       })
-
+      
       // This event is emitted when the playback state changes - can be used to show a buffer spinner during buffering
       instance.on("playback state", (state) => (playbackState.textContent = state))
 
