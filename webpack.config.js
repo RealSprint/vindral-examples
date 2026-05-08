@@ -17,6 +17,7 @@ const pages = [
   "webrtc-ingest-sources",
   "webrtc-ingest-embed",
   "webrtc-ingest-screen-sharing",
+  "publisher-sources",
 ];
 
 const noBuildPages = [
