@@ -107,6 +107,11 @@ const startPublishing = async () => {
   })
 
   publisher.on("error", (error) => {
+    // A non-fatal error is a failed connect attempt: the publisher keeps retrying
+    if (!error.isFatal) {
+      console.warn("Connection attempt failed:", error.code, error.message)
+      return
+    }
     console.error("Publisher error:", error)
     publisherState.textContent = `error: ${error.code}`
   })
