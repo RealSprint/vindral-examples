@@ -125,7 +125,7 @@ const startPublishing = async () => {
         height: 720,
         framerate: 30,
         bitrate: 2_000_000,
-        gopSize: 60,
+        gopSize: 30, // 1 s at 30 fps
       },
     })
   }
